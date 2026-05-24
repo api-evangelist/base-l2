@@ -186,6 +186,8 @@ common:
     url: https://discord.gg/buildonbase
   - type: Blog
     url: https://base.mirror.xyz
+  - type: LLMsTxt
+    url: https://docs.base.org/llms.txt
 integrations:
   - name: Ethereum
   - name: Optimism Superchain
