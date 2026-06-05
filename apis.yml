@@ -11,192 +11,194 @@ description: >-
   chain bridge. Block exploration is available through BaseScan and Blockscout.
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-  - Layer 2
-  - Ethereum
-  - OP Stack
-  - Superchain
-  - JSON-RPC
-  - Smart Wallet
-  - Bridge
+- Layer 2
+- Ethereum
+- OP Stack
+- Superchain
+- JSON-RPC
+- Smart Wallet
+- Bridge
 created: '2026-05-23'
 modified: '2026-05-23'
 specificationVersion: '0.19'
 apis:
-  - aid: base-l2:mainnet-rpc
-    name: Base Mainnet JSON-RPC
-    description: >-
-      Standard Ethereum JSON-RPC endpoint for Base Mainnet (chain ID 8453). Supports
-      eth_*, net_*, web3_*, and Optimism-specific extensions for fee estimation and
-      L1 messaging. The public endpoint is rate-limited and not recommended for
-      production; teams typically front it with Alchemy, QuickNode, Infura, Coinbase
-      Developer Platform, or self-hosted op-geth + op-node.
-    humanURL: https://docs.base.org/chain/network-information
-    baseURL: https://mainnet.base.org
-    tags:
-      - JSON-RPC
-      - Mainnet
-      - EVM
-    properties:
-      - type: Documentation
-        url: https://docs.base.org/chain/network-information
-  - aid: base-l2:sepolia-rpc
-    name: Base Sepolia JSON-RPC
-    description: >-
-      Public JSON-RPC endpoint for the Base Sepolia testnet (chain ID 84532) used for
-      development, contract deployment, and integration testing.
-    humanURL: https://docs.base.org/chain/network-information
-    baseURL: https://sepolia.base.org
-    tags:
-      - JSON-RPC
-      - Testnet
-      - Sepolia
-    properties:
-      - type: Documentation
-        url: https://docs.base.org/chain/network-information
-  - aid: base-l2:flashblocks-rpc
-    name: Base Flashblocks RPC
-    description: >-
-      Pre-confirmation JSON-RPC endpoint exposing Flashblocks — sub-block streams of
-      ordered transactions that allow apps to react to pending state with sub-second
-      latency.
-    humanURL: https://docs.base.org/chain/flashblocks
-    baseURL: https://mainnet-preconf.base.org
-    tags:
-      - Flashblocks
-      - Pre-Confirmation
-      - JSON-RPC
-    properties:
-      - type: Documentation
-        url: https://docs.base.org/chain/flashblocks
-  - aid: base-l2:bridge
-    name: Base Bridge
-    description: >-
-      Canonical cross-chain bridge between Ethereum L1 and Base L2 for depositing and
-      withdrawing ETH and ERC-20 tokens, secured by the OP Stack bridge contracts.
-    humanURL: https://bridge.base.org
-    baseURL: https://bridge.base.org
-    tags:
-      - Bridge
-      - L1
-      - L2
-      - Canonical
-    properties:
-      - type: Documentation
-        url: https://docs.base.org/chain/bridges-mainnet
-      - type: App
-        url: https://bridge.base.org
-  - aid: base-l2:solana-bridge
-    name: Base / Solana Bridge
-    description: >-
-      Cross-chain bridge enabling asset transfers between Base and Solana, integrated
-      into the Base ecosystem app surface.
-    humanURL: https://docs.base.org/chain/base-solana-bridge
-    baseURL: https://docs.base.org/chain/base-solana-bridge
-    tags:
-      - Bridge
-      - Solana
-      - Cross-Chain
-    properties:
-      - type: Documentation
-        url: https://docs.base.org/chain/base-solana-bridge
-  - aid: base-l2:account
-    name: Base Account / Smart Wallet
-    description: >-
-      Base Account (formerly Coinbase Smart Wallet) is an ERC-4337 smart contract
-      wallet with passkey sign-in, sub-accounts, session keys, sponsored transactions
-      via paymaster, and SDK + React component integrations.
-    humanURL: https://docs.base.org/base-account
-    baseURL: https://docs.base.org/base-account
-    tags:
-      - Smart Wallet
-      - Account Abstraction
-      - ERC-4337
-      - Passkeys
-    properties:
-      - type: Documentation
-        url: https://docs.base.org/base-account
-      - type: Website
-        url: https://www.smartwallet.dev
-  - aid: base-l2:onchainkit
-    name: OnchainKit
-    description: >-
-      React component library and TypeScript SDK (@coinbase/onchainkit) for building
-      onchain apps on Base — wallet, identity, transaction, swap, checkout, fund, and
-      NFT components with built-in Smart Wallet and Mini App support.
-    humanURL: https://docs.base.org/onchainkit
-    baseURL: https://www.npmjs.com/package/@coinbase/onchainkit
-    tags:
-      - SDK
-      - React
-      - Components
-      - Onchain
-    properties:
-      - type: Documentation
-        url: https://docs.base.org/onchainkit
-      - type: Repository
-        url: https://github.com/coinbase/onchainkit
-  - aid: base-l2:basescan-explorer
-    name: BaseScan Block Explorer
-    description: >-
-      Etherscan-family block explorer for Base Mainnet and Sepolia with a public
-      contract / transaction / address API.
-    humanURL: https://basescan.org
-    baseURL: https://api.basescan.org/api
-    tags:
-      - Block Explorer
-      - API
-      - BaseScan
-    properties:
-      - type: Documentation
-        url: https://docs.basescan.org
-      - type: Website
-        url: https://basescan.org
-  - aid: base-l2:blockscout-explorer
-    name: Base Blockscout Block Explorer
-    description: >-
-      Blockscout-powered open-source block explorer for Base with REST and GraphQL
-      APIs.
-    humanURL: https://base.blockscout.com
-    baseURL: https://base.blockscout.com/api
-    tags:
-      - Block Explorer
-      - Blockscout
-      - API
-    properties:
-      - type: Website
-        url: https://base.blockscout.com
-common:
-  - type: Website
-    url: https://www.base.org
+- aid: base-l2:mainnet-rpc
+  name: Base Mainnet JSON-RPC
+  description: >-
+    Standard Ethereum JSON-RPC endpoint for Base Mainnet (chain ID 8453). Supports
+    eth_*, net_*, web3_*, and Optimism-specific extensions for fee estimation and
+    L1 messaging. The public endpoint is rate-limited and not recommended for
+    production; teams typically front it with Alchemy, QuickNode, Infura, Coinbase
+    Developer Platform, or self-hosted op-geth + op-node.
+  humanURL: https://docs.base.org/chain/network-information
+  baseURL: https://mainnet.base.org
+  tags:
+  - JSON-RPC
+  - Mainnet
+  - EVM
+  properties:
   - type: Documentation
-    url: https://docs.base.org
-  - type: GitHub
-    url: https://github.com/base-org
-  - type: GitHubOrganization
-    url: https://github.com/base
-  - type: Status
-    url: https://status.base.org
-  - type: Bridge
+    url: https://docs.base.org/chain/network-information
+  - url: graphql/base-l2-graphql.md
+    type: GraphQL
+- aid: base-l2:sepolia-rpc
+  name: Base Sepolia JSON-RPC
+  description: >-
+    Public JSON-RPC endpoint for the Base Sepolia testnet (chain ID 84532) used for
+    development, contract deployment, and integration testing.
+  humanURL: https://docs.base.org/chain/network-information
+  baseURL: https://sepolia.base.org
+  tags:
+  - JSON-RPC
+  - Testnet
+  - Sepolia
+  properties:
+  - type: Documentation
+    url: https://docs.base.org/chain/network-information
+- aid: base-l2:flashblocks-rpc
+  name: Base Flashblocks RPC
+  description: >-
+    Pre-confirmation JSON-RPC endpoint exposing Flashblocks — sub-block streams of
+    ordered transactions that allow apps to react to pending state with sub-second
+    latency.
+  humanURL: https://docs.base.org/chain/flashblocks
+  baseURL: https://mainnet-preconf.base.org
+  tags:
+  - Flashblocks
+  - Pre-Confirmation
+  - JSON-RPC
+  properties:
+  - type: Documentation
+    url: https://docs.base.org/chain/flashblocks
+- aid: base-l2:bridge
+  name: Base Bridge
+  description: >-
+    Canonical cross-chain bridge between Ethereum L1 and Base L2 for depositing and
+    withdrawing ETH and ERC-20 tokens, secured by the OP Stack bridge contracts.
+  humanURL: https://bridge.base.org
+  baseURL: https://bridge.base.org
+  tags:
+  - Bridge
+  - L1
+  - L2
+  - Canonical
+  properties:
+  - type: Documentation
+    url: https://docs.base.org/chain/bridges-mainnet
+  - type: App
     url: https://bridge.base.org
-  - type: Ecosystem
-    url: https://www.base.org/ecosystem
-  - type: Twitter
-    url: https://x.com/base
-  - type: Discord
-    url: https://discord.gg/buildonbase
-  - type: Blog
-    url: https://base.mirror.xyz
-  - type: LLMsTxt
-    url: https://docs.base.org/llms.txt
+- aid: base-l2:solana-bridge
+  name: Base / Solana Bridge
+  description: >-
+    Cross-chain bridge enabling asset transfers between Base and Solana, integrated
+    into the Base ecosystem app surface.
+  humanURL: https://docs.base.org/chain/base-solana-bridge
+  baseURL: https://docs.base.org/chain/base-solana-bridge
+  tags:
+  - Bridge
+  - Solana
+  - Cross-Chain
+  properties:
+  - type: Documentation
+    url: https://docs.base.org/chain/base-solana-bridge
+- aid: base-l2:account
+  name: Base Account / Smart Wallet
+  description: >-
+    Base Account (formerly Coinbase Smart Wallet) is an ERC-4337 smart contract
+    wallet with passkey sign-in, sub-accounts, session keys, sponsored transactions
+    via paymaster, and SDK + React component integrations.
+  humanURL: https://docs.base.org/base-account
+  baseURL: https://docs.base.org/base-account
+  tags:
+  - Smart Wallet
+  - Account Abstraction
+  - ERC-4337
+  - Passkeys
+  properties:
+  - type: Documentation
+    url: https://docs.base.org/base-account
+  - type: Website
+    url: https://www.smartwallet.dev
+- aid: base-l2:onchainkit
+  name: OnchainKit
+  description: >-
+    React component library and TypeScript SDK (@coinbase/onchainkit) for building
+    onchain apps on Base — wallet, identity, transaction, swap, checkout, fund, and
+    NFT components with built-in Smart Wallet and Mini App support.
+  humanURL: https://docs.base.org/onchainkit
+  baseURL: https://www.npmjs.com/package/@coinbase/onchainkit
+  tags:
+  - SDK
+  - React
+  - Components
+  - Onchain
+  properties:
+  - type: Documentation
+    url: https://docs.base.org/onchainkit
+  - type: Repository
+    url: https://github.com/coinbase/onchainkit
+- aid: base-l2:basescan-explorer
+  name: BaseScan Block Explorer
+  description: >-
+    Etherscan-family block explorer for Base Mainnet and Sepolia with a public
+    contract / transaction / address API.
+  humanURL: https://basescan.org
+  baseURL: https://api.basescan.org/api
+  tags:
+  - Block Explorer
+  - API
+  - BaseScan
+  properties:
+  - type: Documentation
+    url: https://docs.basescan.org
+  - type: Website
+    url: https://basescan.org
+- aid: base-l2:blockscout-explorer
+  name: Base Blockscout Block Explorer
+  description: >-
+    Blockscout-powered open-source block explorer for Base with REST and GraphQL
+    APIs.
+  humanURL: https://base.blockscout.com
+  baseURL: https://base.blockscout.com/api
+  tags:
+  - Block Explorer
+  - Blockscout
+  - API
+  properties:
+  - type: Website
+    url: https://base.blockscout.com
+common:
+- type: Website
+  url: https://www.base.org
+- type: Documentation
+  url: https://docs.base.org
+- type: GitHub
+  url: https://github.com/base-org
+- type: GitHubOrganization
+  url: https://github.com/base
+- type: Status
+  url: https://status.base.org
+- type: Bridge
+  url: https://bridge.base.org
+- type: Ecosystem
+  url: https://www.base.org/ecosystem
+- type: Twitter
+  url: https://x.com/base
+- type: Discord
+  url: https://discord.gg/buildonbase
+- type: Blog
+  url: https://base.mirror.xyz
+- type: LLMsTxt
+  url: https://docs.base.org/llms.txt
 integrations:
-  - name: Ethereum
-  - name: Optimism Superchain
-  - name: OP Stack
-  - name: Coinbase
-  - name: Solana (bridge)
-  - name: Alchemy
-  - name: QuickNode
-  - name: Infura
+- name: Ethereum
+- name: Optimism Superchain
+- name: OP Stack
+- name: Coinbase
+- name: Solana (bridge)
+- name: Alchemy
+- name: QuickNode
+- name: Infura
 maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
+- FN: Kin Lane
+  email: kin@apievangelist.com
