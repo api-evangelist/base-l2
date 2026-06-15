@@ -1,0 +1,197 @@
+{
+  "item": [
+    {
+      "id": "f15a5c8a-3e87-4838-8642-d634cf70cc74",
+      "name": "JSON-RPC",
+      "description": {
+        "content": "Ethereum JSON-RPC 2.0 endpoint",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "fc00fbd6-6573-45f8-b8d0-9ec4ea334282",
+          "name": "JSON-RPC 2.0 request",
+          "request": {
+            "name": "JSON-RPC 2.0 request",
+            "description": {
+              "content": "Single endpoint that accepts any JSON-RPC 2.0 request. Supports the standard Ethereum namespaces (`eth_*`, `net_*`, `web3_*`) plus Optimism-specific extensions for fee estimation and L1 messaging. Batched requests (JSON arrays of request objects) are also supported.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ""
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"jsonrpc\": \"<string>\",\n  \"method\": \"<string>\",\n  \"id\": \"<string>\",\n  \"params\": \"<array>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "6d8f191e-c4a2-4f70-8d31-63317fddaebd",
+              "name": "JSON-RPC response (or array of responses for batched calls)",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"method\": \"eth_blockNumber\",\n  \"params\": []\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"jsonrpc\": \"string\",\n  \"id\": \"string\",\n  \"result\": {},\n  \"error\": {\n    \"code\": 1449,\n    \"message\": \"string\",\n    \"data\": {}\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "9fdd9722-7d7e-485a-8592-f86ecc92d3ea",
+              "name": "Rate limit exceeded",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"method\": \"eth_blockNumber\",\n  \"params\": []\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "be6dbffd-d7d7-4cef-bce1-cbafa8d3f4d2",
+              "name": "Upstream node error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"method\": \"eth_blockNumber\",\n  \"params\": []\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://mainnet.base.org",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "0e461920-93dd-4bc7-bcf6-f3f27c334b0e",
+    "name": "Base JSON-RPC API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Standard Ethereum JSON-RPC interface for the Base network, Coinbase's Ethereum Layer 2 built on the OP Stack and part of the Optimism Superchain. All calls are HTTP POST with a JSON-RPC 2.0 payload. The public endpoints are rate-limited and not recommended for production; teams typically front them with Alchemy, QuickNode, Infura, Coinbase Developer Platform, or self-hosted op-geth + op-node. Flashblocks endpoints provide preconfirmed block data with lower latency.\n\nContact Support:\n Name: Base Documentation",
+      "type": "text/plain"
+    }
+  }
+}
