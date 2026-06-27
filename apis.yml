@@ -188,7 +188,7 @@ common:
   url: https://discord.gg/buildonbase
 - type: Blog
   url: https://base.mirror.xyz
-- type: LLMsTxt
+- type: LlmsText
   url: https://docs.base.org/llms.txt
 integrations:
 - name: Ethereum
