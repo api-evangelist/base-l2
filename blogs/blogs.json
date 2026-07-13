@@ -2,11 +2,11 @@
   "repo": "base-l2",
   "feeds": [
     {
-      "source": "https://base.mirror.xyz",
+      "source": "https://base.mirror.xyz/feed/",
       "feed_url": "https://base.mirror.xyz/feed/",
       "title": "",
       "saved": 0,
-      "method": "discovered"
+      "method": "feed"
     },
     {
       "source": "https://discord.gg/buildonbase",
@@ -16,6 +16,6 @@
       "method": "none"
     }
   ],
-  "fetched": "2026-06-27T12:03:07Z",
-  "post_count": 0
+  "fetched": "2026-07-11T11:50:51Z",
+  "post_count": 20
 }
