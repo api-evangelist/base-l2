@@ -168,6 +168,8 @@ apis:
   - type: Website
     url: https://base.blockscout.com
 common:
+- type: AgenticAccess
+  url: agentic-access/base-l2-agentic-access.yml
 - type: DomainSecurity
   url: security/base-l2-domain-security.yml
 - type: Website
