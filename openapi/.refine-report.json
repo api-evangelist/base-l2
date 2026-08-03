@@ -1,0 +1,14 @@
+{
+  "provider": "base-l2",
+  "sources": [
+    "base-l2-json-rpc-api-openapi.yml"
+  ],
+  "outputs": [
+    "base-l2-json-rpc-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
