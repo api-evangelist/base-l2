@@ -185,6 +185,13 @@ apis:
   - type: OpenAPI
     url: openapi/base-l2-json-rpc-api-openapi.yml
 common:
+- type: IssueTracker
+  url: https://github.com/coinbase/onchainkit/issues
+- type: Releases
+  url: https://github.com/coinbase/onchainkit/releases
+- type: License
+  name: MIT
+  url: https://github.com/coinbase/onchainkit/blob/main/LICENSE
 - type: AgenticAccess
   url: agentic-access/base-l2-agentic-access.yml
 - type: DomainSecurity
