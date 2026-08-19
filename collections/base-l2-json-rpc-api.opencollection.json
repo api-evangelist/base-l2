@@ -1,0 +1,33 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Base JSON-RPC API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "JSON-RPC",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "JSON-RPC 2.0 request",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://mainnet.base.org/",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Single endpoint that accepts any JSON-RPC 2.0 request. Supports the standard Ethereum namespaces (`eth_*`, `net_*`, `web3_*`) plus Optimism-specific extensions for fee estimation and L1 messaging. Batched requests (JSON arrays of request objects) are also supported."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
