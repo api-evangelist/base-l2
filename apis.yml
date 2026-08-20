@@ -155,6 +155,9 @@ apis:
   baseURL: https://api.basescan.org/api
   tags:
   - Block Explorer
+  - BaseScan
+  tags_raw:
+  - Block Explorer
   - API
   - BaseScan
   properties:
@@ -168,6 +171,9 @@ apis:
   humanURL: https://base.blockscout.com
   baseURL: https://base.blockscout.com/api
   tags:
+  - Block Explorer
+  - Blockscout
+  tags_raw:
   - Block Explorer
   - Blockscout
   - API
