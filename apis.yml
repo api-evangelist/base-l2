@@ -32,6 +32,7 @@ accessModel:
   confidence: medium
   source:
   - plans
+  - {url: 'https://www.smartwallet.dev', status: 308, note: 'declared website redirects to https://www.base.org/ — a different registrable domain (smartwallet.dev -> base.org), possible rename or acquisition (probed 2026-09-03, roadmap#169)'}
   generated: '2026-07-22'
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/base-l2.png
