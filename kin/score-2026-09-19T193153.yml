@@ -1,24 +1,22 @@
-# Kin Score artifact — base-l2 — 2026-08-19T082702
+# Kin Score artifact — base-l2 — 2026-09-19T193153
 # The API Evangelist rating (https://github.com/api-evangelist/kin-score). Generated; do not edit.
 ---
 kin_score:
   slug: base-l2
-  schema_version: 0.12.0
-  scored_at: '2026-08-19'
-  run_ts: 2026-08-19T082702
-  composite: 31.9
+  schema_version: 0.22.0
+  scored_at: '2026-09-19'
+  run_ts: 2026-09-19T193153
+  composite: 30.0
   band: thin
   facets:
-    discoverability: 81.5
-    contract_quality: 53.8
-    governance: 0.0
+    discoverability: 75.9
+    contract_quality: 55.1
+    contract_governance: 0.0
     operational_transparency: 39.5
     developer_ergonomics: 14.3
-    commercial_clarity: 28.9
-    contract_governance: 0.0
     access_clarity: 28.9
   agent_readiness:
-    score: 26.5
+    score: 22.3
     band: agent-aware
     dimensions:
       spec_presence: true
@@ -36,12 +34,19 @@ kin_score:
       consent_identity: false
       agent_card: false
       dry_run_mode: false
+      delegated_identity: false
+      protected_resource_metadata: false
+      dynamic_client_registration: false
+      agentic_commerce: false
   regulatory:
     applies: true
     regime: Payments
     regime_id: payments
     score: 9.4
     matched_via: tags
+  open_source:
+    applies: true
+    score: 25.0
   provenance:
     agentic_access: derived
     contracts:
