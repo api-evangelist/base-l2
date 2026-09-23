@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Base JSON-RPC API
+  title: Base JSON RPC API
   version: 1.0.0
   description: Standard Ethereum JSON-RPC interface for the Base network, Coinbase's Ethereum Layer 2 built on the OP Stack and part of the Optimism Superchain. All calls are HTTP POST with a JSON-RPC 2.0 payload. The public endpoints are rate-limited and not recommended for production; teams typically front them with Alchemy, QuickNode, Infura, Coinbase Developer Platform, or self-hosted op-geth + op-node. Flashblocks endpoints provide preconfirmed block data with lower latency.
   contact:
@@ -92,8 +92,40 @@ paths:
           description: Rate limit exceeded
         5XX:
           description: Upstream node error
+      operationId: postRoot
+      x-operation-id-source: derived
 components:
   schemas:
+    JsonRpcError:
+      type: object
+      required:
+      - code
+      - message
+      properties:
+        code:
+          type: integer
+        message:
+          type: string
+        data:
+          description: Optional error data.
+    JsonRpcResponse:
+      type: object
+      required:
+      - jsonrpc
+      - id
+      properties:
+        jsonrpc:
+          type: string
+          const: '2.0'
+        id:
+          oneOf:
+          - type: string
+          - type: integer
+          - type: 'null'
+        result:
+          description: Method-specific result; present on success.
+        error:
+          $ref: '#/components/schemas/JsonRpcError'
     JsonRpcRequest:
       type: object
       required:
@@ -115,33 +147,3 @@ components:
           oneOf:
           - type: array
           - type: object
-    JsonRpcResponse:
-      type: object
-      required:
-      - jsonrpc
-      - id
-      properties:
-        jsonrpc:
-          type: string
-          const: '2.0'
-        id:
-          oneOf:
-          - type: string
-          - type: integer
-          - type: 'null'
-        result:
-          description: Method-specific result; present on success.
-        error:
-          $ref: '#/components/schemas/JsonRpcError'
-    JsonRpcError:
-      type: object
-      required:
-      - code
-      - message
-      properties:
-        code:
-          type: integer
-        message:
-          type: string
-        data:
-          description: Optional error data.
