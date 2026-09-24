@@ -69,8 +69,6 @@ apis:
   properties:
   - type: Documentation
     url: https://docs.base.org/chain/network-information
-  - url: graphql/base-l2-graphql.md
-    type: GraphQL
 - aid: base-l2:sepolia-rpc
   name: Base Sepolia JSON-RPC
   description: >-
