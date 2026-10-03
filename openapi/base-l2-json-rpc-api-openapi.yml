@@ -96,6 +96,18 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
+    JsonRpcError:
+      type: object
+      required:
+      - code
+      - message
+      properties:
+        code:
+          type: integer
+        message:
+          type: string
+        data:
+          description: Optional error data.
     JsonRpcResponse:
       type: object
       required:
@@ -114,18 +126,6 @@ components:
           description: Method-specific result; present on success.
         error:
           $ref: '#/components/schemas/JsonRpcError'
-    JsonRpcError:
-      type: object
-      required:
-      - code
-      - message
-      properties:
-        code:
-          type: integer
-        message:
-          type: string
-        data:
-          description: Optional error data.
     JsonRpcRequest:
       type: object
       required:
