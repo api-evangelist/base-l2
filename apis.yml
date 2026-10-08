@@ -208,6 +208,12 @@ apis:
   - type: OpenAPI
     url: openapi/base-l2-json-rpc-api-openapi.yml
 common:
+- type: Plans
+  url: plans/base-l2-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/base-l2-rate-limits.yml
+- type: FinOps
+  url: finops/base-l2-finops.yml
 - type: IssueTracker
   url: https://github.com/coinbase/onchainkit/issues
 - type: Releases
