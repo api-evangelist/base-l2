@@ -2,11 +2,11 @@
   "repo": "base-l2",
   "feeds": [
     {
-      "source": "https://discord.gg/buildonbase",
-      "feed_url": "https://discord.gg/buildonbase",
+      "source": "https://base.mirror.xyz",
+      "feed_url": "https://base.mirror.xyz/blog/rss/",
       "title": "",
       "saved": 0,
-      "method": "none"
+      "method": "discovered"
     },
     {
       "source": "https://base.mirror.xyz/feed/",
@@ -14,9 +14,16 @@
       "title": "",
       "saved": 0,
       "method": "feed"
+    },
+    {
+      "source": "https://discord.gg/buildonbase",
+      "feed_url": "https://discord.gg/buildonbase",
+      "title": "",
+      "saved": 0,
+      "method": "none"
     }
   ],
-  "fetched": "2026-10-03T12:30:02Z",
+  "fetched": "2026-10-10T13:15:00Z",
   "post_count": 20,
   "feed_nature": "undetermined",
   "feed_nature_basis": null,
