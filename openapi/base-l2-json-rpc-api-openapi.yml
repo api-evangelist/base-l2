@@ -96,18 +96,6 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    JsonRpcError:
-      type: object
-      required:
-      - code
-      - message
-      properties:
-        code:
-          type: integer
-        message:
-          type: string
-        data:
-          description: Optional error data.
     JsonRpcRequest:
       type: object
       required:
@@ -129,6 +117,18 @@ components:
           oneOf:
           - type: array
           - type: object
+    JsonRpcError:
+      type: object
+      required:
+      - code
+      - message
+      properties:
+        code:
+          type: integer
+        message:
+          type: string
+        data:
+          description: Optional error data.
     JsonRpcResponse:
       type: object
       required:
