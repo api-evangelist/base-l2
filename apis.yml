@@ -107,6 +107,11 @@ apis:
   tags:
   - Bridge
   - L1
+  - Layer 2
+  - Canonical
+  tags_raw:
+  - Bridge
+  - L1
   - L2
   - Canonical
   properties:
