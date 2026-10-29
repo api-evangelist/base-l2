@@ -1,4 +1,4 @@
-# Base (base-l2)
+# Base
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,218 +66,138 @@
 
 Base is Coinbase's Ethereum Layer 2 network built on the OP Stack and part of the Optimism Superchain. It exposes a standard Ethereum JSON-RPC interface for smart contracts and dApps, plus higher-level developer surfaces including Base Account (Smart Wallet, Sub Accounts, passkeys, paymaster-sponsored transactions), OnchainKit React components, Mini Apps, the canonical Bridge to Ethereum, and a Solana cross- chain bridge. Block exploration is available through BaseScan and Blockscout.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/base-l2/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/base-l2/refs/heads/main/apis.yml)
+**Areas:** Layer 2 · Ethereum · OP Stack · Superchain · JSON-RPC · Smart Wallet · Bridge · Base
 
-## Tags
+## Base on APIs.io
 
-- Layer 2
-- Ethereum
-- OP Stack
-- Superchain
-- JSON-RPC
-- Smart Wallet
-- Bridge
+Everything profiled for Base is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/base-l2/](https://apis.io/providers/base-l2/)** — or go straight to one of the APIs or properties below.
 
-## Timestamps
+### APIs (10)
 
-- **Created:** 2026-05-23
-- **Modified:** 2026-05-23
+- [Base Mainnet JSON-RPC](https://apis.io/apis/base-l2/mainnet-rpc/) — Standard Ethereum JSON-RPC endpoint for Base Mainnet (chain ID 8453). Supports eth_*, net_*, web3_*, and Optimism-specific extensions for fee estimation and…
+- [Base Sepolia JSON-RPC](https://apis.io/apis/base-l2/sepolia-rpc/) — Public JSON-RPC endpoint for the Base Sepolia testnet (chain ID 84532) used for development, contract deployment, and integration testing.
+- [Base Flashblocks RPC](https://apis.io/apis/base-l2/flashblocks-rpc/) — Pre-confirmation JSON-RPC endpoint exposing Flashblocks — sub-block streams of ordered transactions that allow apps to react to pending state with…
+- [Base Bridge](https://apis.io/apis/base-l2/bridge/) — Canonical cross-chain bridge between Ethereum L1 and Base L2 for depositing and withdrawing ETH and ERC-20 tokens, secured by the OP Stack bridge contracts.
+- [Base / Solana Bridge](https://apis.io/apis/base-l2/solana-bridge/) — Cross-chain bridge enabling asset transfers between Base and Solana, integrated into the Base ecosystem app surface.
+- [Base Account / Smart Wallet](https://apis.io/apis/base-l2/account/) — Base Account (formerly Coinbase Smart Wallet) is an ERC-4337 smart contract wallet with passkey sign-in, sub-accounts, session keys, sponsored transactions…
+- [OnchainKit](https://apis.io/apis/base-l2/onchainkit/) — React component library and TypeScript SDK (@coinbase/onchainkit) for building onchain apps on Base — wallet, identity, transaction, swap, checkout, fund,…
+- [BaseScan Block Explorer](https://apis.io/apis/base-l2/basescan-explorer/) — Etherscan-family block explorer for Base Mainnet and Sepolia with a public contract / transaction / address API.
+- [Base Blockscout Block Explorer](https://apis.io/apis/base-l2/blockscout-explorer/) — Blockscout-powered open-source block explorer for Base with REST and GraphQL APIs.
+- [Base JSON-RPC API](https://apis.io/apis/base-l2/base-l2-json-rpc-api/) — Ethereum JSON-RPC 2.0 endpoint
 
-## APIs
+### Published properties
 
-### Base Mainnet JSON-RPC
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-Standard Ethereum JSON-RPC endpoint for Base Mainnet (chain ID 8453). Supports eth_*, net_*, web3_*, and Optimism-specific extensions for fee estimation and L1 messaging. The public endpoint is rate-limited and not recommended for production; teams typically front it with Alchemy, QuickNode, Infura, Coinbase Developer Platform, or self-hosted op-geth + op-node.
+#### GraphQL (1)
 
-- **Human URL:** [https://docs.base.org/chain/network-information](https://docs.base.org/chain/network-information)
-- **Base URL:** `https://mainnet.base.org`
+GraphQL schemas.
 
-#### Tags
+- [Moved to /providers/base-l2/](https://apis.io/graphqls/base-l2/base-l2-graphql/)
 
-- JSON-RPC
-- Mainnet
-- EVM
+#### MCP servers (1)
 
-#### Properties
+Model Context Protocol servers that expose the API to agents.
 
-- [Documentation](https://docs.base.org/chain/network-information)
-- [Postman Collection](collections/base-l2.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/base-l2.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [base-l2](https://apis.io/servers/base-l2/base-l2/)
 
-### Base Sepolia JSON-RPC
+#### Agentic access (1)
 
-Public JSON-RPC endpoint for the Base Sepolia testnet (chain ID 84532) used for development, contract deployment, and integration testing.
+Which operations an agent can call, which act, and which need a human in the loop.
 
-- **Human URL:** [https://docs.base.org/chain/network-information](https://docs.base.org/chain/network-information)
-- **Base URL:** `https://sepolia.base.org`
+- [Base L2 Agentic Access](https://apis.io/agentic-access/base-l2/base-l2-agentic-access/)
 
-#### Tags
+#### Collections (2)
 
-- JSON-RPC
-- Testnet
-- Sepolia
+Postman and Open Collection request collections.
 
-#### Properties
+- [Base JSON-RPC API](https://apis.io/collections/base-l2/open-base-l2/)
+- [Base JSON-RPC API](https://apis.io/collections/base-l2/open-base-l2-json-rpc-api/)
 
-- [Documentation](https://docs.base.org/chain/network-information)
-- [Postman Collection](collections/base-l2.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/base-l2.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+#### Security (1)
 
-### Base Flashblocks RPC
+Authentication, trust centre, and vulnerability disclosure.
 
-Pre-confirmation JSON-RPC endpoint exposing Flashblocks — sub-block streams of ordered transactions that allow apps to react to pending state with sub-second latency.
+- [Base L2 Domain Security](https://apis.io/security/base-l2/base-l2-domain-security/)
 
-- **Human URL:** [https://docs.base.org/chain/flashblocks](https://docs.base.org/chain/flashblocks)
-- **Base URL:** `https://mainnet-preconf.base.org`
+#### Plans and pricing (1)
 
-#### Tags
+Published plans, tiers and prices.
 
-- Flashblocks
-- Pre-Confirmation
-- JSON-RPC
+- [Base L2 Plans Pricing](https://apis.io/plans/base-l2/base-l2-plans-pricing/)
 
-#### Properties
+#### Rate limits (1)
 
-- [Documentation](https://docs.base.org/chain/flashblocks)
-- [Postman Collection](collections/base-l2.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/base-l2.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Published request limits.
 
-### Base Bridge
+- [Base L2 Rate Limits](https://apis.io/rate-limits/base-l2/base-l2-rate-limits/)
 
-Canonical cross-chain bridge between Ethereum L1 and Base L2 for depositing and withdrawing ETH and ERC-20 tokens, secured by the OP Stack bridge contracts.
+#### FinOps (1)
 
-- **Human URL:** [https://bridge.base.org](https://bridge.base.org)
-- **Base URL:** `https://bridge.base.org`
+What the API costs to run, by operation.
 
-#### Tags
+- [Base L2 Finops](https://apis.io/finops/base-l2/base-l2-finops/)
 
-- Bridge
-- L1
-- L2
-- Canonical
+## Where to find this API
 
-#### Properties
-
-- [Documentation](https://docs.base.org/chain/bridges-mainnet)
-- [App](https://bridge.base.org)
-- [Postman Collection](collections/base-l2.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/base-l2.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Base / Solana Bridge
-
-Cross-chain bridge enabling asset transfers between Base and Solana, integrated into the Base ecosystem app surface.
-
-- **Human URL:** [https://docs.base.org/chain/base-solana-bridge](https://docs.base.org/chain/base-solana-bridge)
-- **Base URL:** `https://docs.base.org/chain/base-solana-bridge`
-
-#### Tags
-
-- Bridge
-- Solana
-- Cross-Chain
-
-#### Properties
-
-- [Documentation](https://docs.base.org/chain/base-solana-bridge)
-- [Postman Collection](collections/base-l2.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/base-l2.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Base Account / Smart Wallet
-
-Base Account (formerly Coinbase Smart Wallet) is an ERC-4337 smart contract wallet with passkey sign-in, sub-accounts, session keys, sponsored transactions via paymaster, and SDK + React component integrations.
-
-- **Human URL:** [https://docs.base.org/base-account](https://docs.base.org/base-account)
-- **Base URL:** `https://docs.base.org/base-account`
-
-#### Tags
-
-- Smart Wallet
-- Account Abstraction
-- ERC-4337
-- Passkeys
-
-#### Properties
-
-- [Documentation](https://docs.base.org/base-account)
-- [Website](https://www.smartwallet.dev)
-- [Postman Collection](collections/base-l2.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/base-l2.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### OnchainKit
-
-React component library and TypeScript SDK (@coinbase/onchainkit) for building onchain apps on Base — wallet, identity, transaction, swap, checkout, fund, and NFT components with built-in Smart Wallet and Mini App support.
-
-- **Human URL:** [https://docs.base.org/onchainkit](https://docs.base.org/onchainkit)
-- **Base URL:** `https://www.npmjs.com/package/@coinbase/onchainkit`
-
-#### Tags
-
-- SDK
-- React
-- Components
-- Onchain
-
-#### Properties
-
-- [Documentation](https://docs.base.org/onchainkit)
-- [Repository](https://github.com/coinbase/onchainkit)
-- [Postman Collection](collections/base-l2.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/base-l2.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### BaseScan Block Explorer
-
-Etherscan-family block explorer for Base Mainnet and Sepolia with a public contract / transaction / address API.
-
-- **Human URL:** [https://basescan.org](https://basescan.org)
-- **Base URL:** `https://api.basescan.org/api`
-
-#### Tags
-
-- Block Explorer
-- API
-- BaseScan
-
-#### Properties
-
-- [Documentation](https://docs.basescan.org)
-- [Website](https://basescan.org)
-- [Postman Collection](collections/base-l2.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/base-l2.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Base Blockscout Block Explorer
-
-Blockscout-powered open-source block explorer for Base with REST and GraphQL APIs.
-
-- **Human URL:** [https://base.blockscout.com](https://base.blockscout.com)
-- **Base URL:** `https://base.blockscout.com/api`
-
-#### Tags
-
-- Block Explorer
-- Blockscout
-- API
-
-#### Properties
-
-- [Website](https://base.blockscout.com)
-- [Postman Collection](collections/base-l2.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/base-l2.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-## Common Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.base.org)
 - [Documentation](https://docs.base.org)
-- [Git Hub](https://github.com/base-org)
-- [GitHub Organization](https://github.com/base)
-- [Status](https://status.base.org)
-- [Bridge](https://bridge.base.org)
-- [Ecosystem](https://www.base.org/ecosystem)
-- [Twitter](https://x.com/base)
-- [Discord](https://discord.gg/buildonbase)
 - [Blog](https://base.mirror.xyz)
-- [L L Ms Txt](https://docs.base.org/llms.txt)
+- [GitHub](https://github.com/base)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 23.9** — emerging · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 75.0 |
+| Contract quality | 49.6 |
+| Contract governance | 0.0 |
+| Operational transparency | 23.7 |
+| Developer ergonomics | 14.3 |
+| Access clarity | 5.3 |
+
+**Agent readiness 29.0** — agent-ready
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | verified |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | verified |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 5.4** — Payments
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/base-l2/](https://apis.io/providers/base-l2/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Base: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/base-l2/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
